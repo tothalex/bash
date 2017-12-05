@@ -1,0 +1,35 @@
+$valtozo							# a valtozo erteket adja
+$*								# ("$1$2$3")
+$@								# ("$1""$2""$3")
+
+"..."								# ertek behelyettesites
+'...'								# nem beh.
+
+for name [[in [words...]];] do commands; done
+for ((expr1; expr2; expr3)); do commands; done
+
+while kifejezes; do utasitasok; done
+
+until kifejezes; do utasitasok; done
+
+if kifejezes; then utasitasok;
+elif kifejezes; then utasitasok;
+else utasitasok;
+fi
+
+select allat in kutya mascka lo eger; do echo $allat; done	# menu
+
+fgv_nev()							# fgv letrehozasa
+
+parancs > allomany_nev						# letrehoz vagy felulir
+parancs >> allomany_nev						# letrehoz vagy hozzafuz
+parancs >& allomany_nev						# stderr es stdout atiranyitasa
+
+parancs < allomany_nev						# allomanybol beolvasas
+
+tomb_nev=(ertek,ertek,ertek)					# tomb letrehozasa
+echo ${tomb_nev[*]}						# tomb elemeinek kiiratasa
+
+${#string}							# string hossza
+
+IFS="valami"
